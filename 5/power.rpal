@@ -1,0 +1,3 @@
+let rec power n = ( n ge 0 & n < 10) -> 1 | (1+ (power (n/10)))
+in
+Print (power 12345)

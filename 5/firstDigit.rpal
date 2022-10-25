@@ -1,0 +1,3 @@
+let rec firstDigit n = ( n ge 0 & n < 10) -> n | firstDigit (n/10)
+in
+Print (firstDigit 65)

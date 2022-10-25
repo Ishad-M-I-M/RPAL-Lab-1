@@ -1,0 +1,7 @@
+let rec firstDigit n = ( n ge 0 & n < 10) -> n | firstDigit (n/10)
+and
+rec power n = ( n ge 0 & n < 10) -> 0 | (1+ (power (n/10)))
+in
+let rec lastDigit n = ( n ge 0 & n < 10) -> n | lastDigit (n - ((firstDigit n) * 10 ** (power n)))
+in
+Print ( lastDigit 126)
