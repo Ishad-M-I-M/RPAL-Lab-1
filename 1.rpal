@@ -1,0 +1,3 @@
+let checkNum x = x < 0 -> 'Negative' | 'Positive'
+in
+Print( checkNum (-23))

@@ -1,0 +1,9 @@
+let rec oddOrEven n = (n ge 0) -> (
+			(n eq 0) -> 'Even' |
+				(n eq 1) -> 'Odd'|
+				oddOrEven (n-2)
+			)
+			|
+			oddOrEven (-n)
+in
+Print (oddOrEven (-76))
