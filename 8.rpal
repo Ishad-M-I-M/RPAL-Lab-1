@@ -1,0 +1,5 @@
+let sumFirstN n = sum 0 n 0
+        where rec sum x n t = (x > n) -> t |
+                              sum (x+1) n (t+x)
+in
+Print ( sumFirstN 10 )
