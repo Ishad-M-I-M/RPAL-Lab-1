@@ -1,0 +1,13 @@
+let rec firstDigit n = ( n ge 0 & n < 10) -> n | firstDigit (n/10)
+and
+rec power n = ( n ge 0 & n < 10) -> 0 | (1+ (power (n/10)))
+in
+let rec lastDigit n = ( n ge 0 & n < 10) -> n | lastDigit (n - ((firstDigit n) * 10 ** (power n)))
+in
+let remain n = (n - ((firstDigit n) * 10 ** (power n)))/10
+in
+let rec isPalindrome n = (n < 10 & n ge 0) -> true |
+			((firstDigit n) eq (lastDigit n)) -> (isPalindrome (remain n)) | false
+in
+Print ( isPalindrome 152251)
+			
